@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - IT Solution Provider</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .about {
+            padding: 20px 5%;
+            opacity: 0; /* Start hidden */
+            animation: fadeIn 1s ease forwards; /* Fade in animation */
+            animation-delay: 0.5s; /* Delay for the fade in */
+        }
+
+        .about h1, .about h2 {
+            animation: fadeInUp 0.8s ease forwards;
+            opacity: 0; /* Start hidden */
+        }
+
+        .about h1 {
+            animation-delay: 0.5s; /* Delay for h1 */
+        }
+
+        .about h2 {
+            animation-delay: 0.7s; /* Delay for h2 */
+        }
+
+        .expertise-item {
+            opacity: 0; /* Start hidden */
+            animation: fadeInUp 0.8s ease forwards; /* Fade in animation for expertise items */
+        }
+
+        .expertise-item:nth-child(1) { animation-delay: 0.9s; }
+        .expertise-item:nth-child(2) { animation-delay: 1.1s; }
+        .expertise-item:nth-child(3) { animation-delay: 1.3s; }
+        .expertise-item:nth-child(4) { animation-delay: 1.5s; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">IT Solution Provider</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="contact-btn">Let's Talk</button>
+        </nav>
+    </header>
+    
+    <section class="about">
+        <h1>About Us</h1>
+        <p>We are <strong>IT Solution Provider</strong>, a dedicated team of developers and designers offering cutting-edge web and mobile solutions. With SE Ghulam Mustafa as CEO, our mission is to provide high-quality IT solutions that cater to the business needs of our clients.</p>
+        
+        <h2>Our Expertise</h2>
+        <div class="expertise-list">
+            <div class="expertise-item">
+                <h3>Web Development</h3>
+                <p>MERN & LERN Stack</p>
+            </div>
+            <div class="expertise-item">
+                <h3>Mobile Application Development</h3>
+                <p>Creating user-friendly mobile solutions for iOS and Android.</p>
+            </div>
+            <div class="expertise-item">
+                <h3>UI/UX Design</h3>
+                <p>Designing intuitive and engaging user experiences.</p>
+            </div>
+            <div class="expertise-item">
+                <h3>Business Branding & Marketing</h3>
+                <p>Helping businesses establish their brand and reach their audience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/ghulammustafa.naq"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/03091967609"<i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/se_ghulam_mustafa?igsh=YzljYTk1ODg3Zg=="><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/gm4514459"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ghulam-mustafa-17b645219"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.tiktok.com/@engghulammustafa786?_t=8qLZZaHorSs&_r=1"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p>&copy; 2024 IT Solution Provider | All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>

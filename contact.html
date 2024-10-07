@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - IT Solution Provider</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #000; /* Pure black background */
+            color: white; /* White text color */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures footer is at bottom */
+        }
+        header nav {
+            background-color: #000; /* Pure black */
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            color: #6c63ff; /* Highlight color */
+        }
+        .contact {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1; /* Allows the contact section to take available space */
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            background-color: #6c63ff; /* Vibrant purple for form background */
+            padding: 20px;
+            border-radius: 5px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            resize: none;
+        }
+        button {
+            background-color: #000; /* Pure black */
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #333; /* Darker shade for hover effect */
+        }
+        footer {
+            background-color: #000; /* Pure black */
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        footer .social-icons a {
+            color: white;
+            margin: 0 5px;
+            transition: color 0.3s;
+        }
+        footer .social-icons a:hover {
+            color: #6c63ff; /* Highlight color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">IT Solution Provider</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="contact-btn">Let's Talk</button>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <h1>Contact Us</h1>
+        <form action="submit_form.php" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/ghulammustafa.naq"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/03091967609"<i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/se_ghulam_mustafa?igsh=YzljYTk1ODg3Zg=="><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/gm4514459"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ghulam-mustafa-17b645219"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.tiktok.com/@engghulammustafa786?_t=8qLZZaHorSs&_r=1"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p>&copy; 2024-25 IT Solution Provider | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Solution Provider - SE Ghulam Mustafa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Additional styles for image section */
+        .image-section {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+            background-color: #f8f9fa; /* Light background for image section */
+        }
+        .image-section img {
+            width: 100px; /* Adjust size as needed */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Optional: add rounded corners */
+        }
+
+        /* Slider styles */
+        .slider {
+            position: relative;
+            max-width: 600px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 5px; /* Optional: add rounded corners */
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .slide img {
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px; /* Optional: add rounded corners */
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+        }
+        .arrow.left {
+            left: 10px;
+        }
+        .arrow.right {
+            right: 10px;
+        }
+
+        /* Centered WhatsApp and Messenger Icons */
+        .icon-container {
+            position: fixed;
+            right: 20px; /* Align to the right */
+            top: 50%; /* Center vertically */
+            transform: translateY(-50%); /* Adjust position */
+            display: flex;
+            flex-direction: column; /* Stack icons vertically */
+            align-items: center; /* Center icons */
+            z-index: 1000; /* Ensure it appears above other content */
+        }
+        .icon {
+            background-color: #25D366; /* WhatsApp color */
+            color: white;
+            border-radius: 50%;
+            padding: 15px;
+            font-size: 24px;
+            margin: 5px 0; /* Space between icons */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+        .icon.messenger {
+            background-color: #0078FF; /* Messenger color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">IT Solution Provider</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="contact-btn">Let's Talk</button>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Professional Web Developer</h1>
+            <h2>CEO SE Ghulam Mustafa</h2>
+            <p>"IT Solution Provider is an online collection of your best web dev projects that accurately represent your skills, your abilities, and the quality of your work. We offer the design, development, testing, and maintenance of software applications. Executes your assignments with the use of web applications, scripts, and programming languages such as Frontend or Backend Developing". </p>
+        </div>
+        <div class="hero-image" id="profile-image">
+            <img src="gm.jpg" alt="Round Image" id="profile-img">
+            <div class="intro" id="intro">This is my introduction! I specialize in web development, offering various services.</div>
+        </div>
+    </section>
+    <!-- Image Section Above Footer -->
+    <section class="image-section">
+        <img src="se-1.jpg" alt="Image 1" style="width:200px;height:200px;">
+        <img src="se-2.jpg" alt="Image 2" style="width:200px;height:200px;">
+        <img src="se-3.jpg" alt="Image 3" style="width:200px;height:200px;">
+        <img src="se-4.jpg" alt="Image 4" style="width:200px;height:200px;">
+        <img src="se-5.jpg" alt="Image 5" style="width:200px;height:200px;">
+        <img src="se-6.jpg" alt="Image 6" style="width:200px;height:200px;">
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/ghulammustafa.naq"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/03091967609"<i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/se_ghulam_mustafa?igsh=YzljYTk1ODg3Zg=="><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/gm4514459"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ghulam-mustafa-17b645219"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.tiktok.com/@engghulammustafa786?_t=8qLZZaHorSs&_r=1"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p>&copy; 2024-25 IT Solution Provider | All Rights Reserved</p>
+<B><I>DEVELOPED BY:SE GHULAM MUSTAFA</B></I>
+    </footer>
+
+    <div class="icon-container">
+        <a href="https://wa.me/your-number" class="icon" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://m.me/your-messenger-id" class="icon messenger" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
+        <a href="https://www.youtube.com/channel/your-channel-id" class="icon youtube" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.instagram.com/channel/your-channel-id" class="icon instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+        function changeSlide(direction) {
+            const slides = document.querySelectorAll('.slide');
+            currentSlide += direction;
+
+            if (currentSlide < 0) {
+                currentSlide = slides.length - 1; // Go to last slide
+            } else if (currentSlide >= slides.length) {
+                currentSlide = 0; // Go to first slide
+            }
+
+            const offset = -currentSlide * 100; // Calculate offset for sliding
+            document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+</body>
+</html>

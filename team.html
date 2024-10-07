@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - IT Solution Provider</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures footer is at bottom */
+            background-color: #000; /* Pure black background */
+            color: white; /* White text color */
+        }
+        header nav {
+            background-color: #000; /* Pure black */
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            color: #6c63ff; /* Highlight color */
+        }
+        .team {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1; /* Allows the team section to take available space */
+        }
+        .team-member {
+            background-color: #6c63ff; /* Vibrant purple for member frames */
+            color: white;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px;
+            display: inline-block;
+            transition: transform 0.3s, background-color 0.3s;
+            cursor: pointer;
+        }
+        .team-member:hover {
+            transform: scale(1.05);
+            background-color: rgba(108, 99, 255, 0.8);
+        }
+        .intro {
+            display: none;
+            margin-top: 10px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .intro.active {
+            display: block;
+            opacity: 1;
+        }
+        footer {
+            background-color: #000; /* Pure black */
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        footer .social-icons a {
+            color: white;
+            margin: 0 5px;
+            transition: color 0.3s;
+        }
+        footer .social-icons a:hover {
+            color: #6c63ff; /* Highlight color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">IT Solution Provider</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="contact-btn">Let's Talk</button>
+        </nav>
+    </header>
+
+    <section class="team">
+        <h1>Meet Our Team</h1>
+        <div class="team-member" onclick="toggleIntro('intro-ceo')">
+            <h3>SE Ghulam Mustafa - CEO</h3>
+            <img src="gmm.jpg" alt="Ghulam Mustafa" width="100"style="width:260px;height:270px;">
+            <div class="intro" id="intro-ceo">Ghulam Mustafa is the CEO and founder of IT Solution Provider, specializing in web development and strategic leadership.</div>
+        </div>
+        <div class="team-member" onclick="toggleIntro('intro-member1')">
+            <h3>Wajeeha Iqbal - WEB DEVELOPER</h3>
+            <img src="wi.jpg" alt="Team Member 1" width="100"style="width:270px;height:270px;">
+            <div class="intro" id="intro-member1">Wajeeha Iqbal Experts in <B>FULL STACK Developer</B> with expertise in creating beautiful and responsive web interfaces.</div>
+        </div>
+        <div class="team-member" onclick="toggleIntro('intro-member2')">
+            <h3>Zeeshan Aftab - UNIX/LINUX</h3>
+            <img src="ZA.jpg" alt="Team Member 2" width="100"style="width:270px;height:270px;">
+            <div class="intro" id="intro-member2">Zeeshan Aftab Experts in UNIX/LINUX focused on server-side logic and database management.</div>
+        </div>
+        <div class="team-member" onclick="toggleIntro('intro-member3')">
+            <h3>Ahsan CH - Mobile App Developer or SEO Speciallist</h3>
+            <img src="ac.webp" alt="Team Member 3" width="100"style="width:270px;height:270px;">
+            <div class="intro" id="intro-member3">Ahsan CH Experts in Mobile App Developer creating intuitive applications for iOS and Android.</div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/ghulammustafa.naq"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/03091967609"<i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/se_ghulam_mustafa?igsh=YzljYTk1ODg3Zg=="><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/gm4514459"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ghulam-mustafa-17b645219"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.tiktok.com/@engghulammustafa786?_t=8qLZZaHorSs&_r=1"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p>&copy; 2024 IT Solution Provider | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function toggleIntro(introId) {
+            const intro = document.getElementById(introId);
+            intro.classList.toggle('active'); // Toggle visibility
+        }
+    </script>
+</body>
+</html>

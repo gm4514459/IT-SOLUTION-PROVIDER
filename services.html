@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - IT Solution Provider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #e9ecef; /* Light grey background */
+        }
+        header nav {
+            background-color: #000; /* Pure black */
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            color: #6c63ff; /* Highlight color */
+        }
+        .services {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-item {
+            background-color: #6c63ff; /* Vibrant purple for service frames */
+            color: white;
+            border: 1px solid #6c63ff;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            cursor: pointer;
+            display: flex; /* Use flex to arrange content */
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .service-item:hover {
+            background-color: rgba(108, 99, 255, 0.8);
+            transform: scale(1.02);
+        }
+        .service-description {
+            flex: 1; /* Allow the description to grow */
+        }
+        .service-image {
+            width: 100px; /* Set a fixed width for images */
+            height: auto; /* Maintain aspect ratio */
+            margin-left: 15px; /* Space between text and image */
+        }
+        .service-details {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+            margin-top: 10px;
+        }
+        .service-details.active {
+            display: block;
+            opacity: 1;
+        }
+        footer {
+            background-color: #000; /* Pure black */
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        footer .social-icons a {
+            color: white;
+            margin: 0 5px;
+            transition: color 0.3s;
+        }
+        footer .social-icons a:hover {
+            color: #6c63ff; /* Highlight color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">IT Solution Provider</div>
+            <div>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="team.html">Team</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <button style="background-color: #6c63ff; color: white; border: none; padding: 10px;">Let's Talk</button>
+        </nav>
+    </header>
+
+    <section class="services">
+        <h1>Our Services</h1>
+        <div class="service-item" onclick="showDetails('web')">
+            <div class="service-description">
+                <h2>Web Design & Development</h2>
+                <p>Creating visually appealing and functional websites tailored to your needs.</p>
+                <div class="service-details" id="details-web">
+                    <p>We create websites using the latest technologies like Both Front End or Back end Development.</p>
+                </div>
+            </div>
+            <img src="WDAD.jpg" alt="Web Design" class="service-image"style="width:210px;height:150px;">
+        </div>
+        <div class="service-item" onclick="showDetails('mobile')">
+            <div class="service-description">
+                <h2>Mobile App Development</h2>
+                <p>Developing intuitive mobile applications for both iOS and Android platforms.</p>
+                <div class="service-details" id="details-mobile">
+                    <p>We specialize in developing mobile applications ensuring an engaging user experience.</p>
+                </div>
+            </div>
+            <img src="MAD.webp" alt="Mobile App" class="service-image"style="width:210px;height:150px;">
+        </div>
+        <div class="service-item" onclick="showDetails('branding')">
+            <div class="service-description">
+                <h2>Automation or QA</h2>
+                <p>Helping businesses establish a strong brand identity and presence.</p>
+                <div class="service-details" id="details-branding">
+                    <p>We Identify Identify opportunities and drive the implementation of automation to improve service health, manageability, and reliability. Develop Automation Frameworks, evaluate toolsets, suggest application specific solutions. Perform Performance Testing using a variety of toolsets..</p>
+                </div>
+            </div>
+            <img src="AOTQA.png" alt="Branding" class="service-image"style="width:210px;height:150px;">
+        </div>
+        <div class="service-item" onclick="showDetails('seo')">
+            <div class="service-description">
+                <h2>SEO & Digital Marketing</h2>
+                <p>Enhancing your online visibility through effective strategies.</p>
+                <div class="service-details" id="details-seo">
+                    <p>We improve online visibility through SEO strategies and marketing campaigns.</p>
+                </div>
+            </div>
+            <img src="seo.jpg" alt="SEO" class="service-image"style="width:210px;height:150px;">
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/ghulammustafa.naq"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/03091967609"<i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/se_ghulam_mustafa?igsh=YzljYTk1ODg3Zg=="><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/gm4514459"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ghulam-mustafa-17b645219"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.tiktok.com/@engghulammustafa786?_t=8qLZZaHorSs&_r=1"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <p>&copy; 2024 IT Solution Provider | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function showDetails(service) {
+            const details = document.querySelectorAll('.service-details');
+            details.forEach(detail => {
+                detail.classList.remove('active'); // Hide all details
+            });
+
+            const detailElement = document.getElementById(`details-${service}`);
+            detailElement.classList.add('active'); // Show selected detail
+        }
+    </script>
+</body>
+</html>
